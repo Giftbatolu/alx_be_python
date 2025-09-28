@@ -1,10 +1,10 @@
 #  datatime module
-import datetime
+from datetime import datetime, timedelta, date
 
 #  Display the current Date and Time
 def display_current_datetime():
     # Get the current date and time
-    current_date = datetime.datetime.now()
+    current_date = datetime.now()
 
     # fortmat and print it
     print("Current data and time: ", current_date.strftime("%Y-%m-%d %H:%M:%S"))
@@ -15,7 +15,7 @@ def calculate_future_date(days):
     # current_date = datetime.date.today()
 
     # Calculate future date
-    future_date = datetime.date.today() + datetime.timedelta(days=days)
+    future_date = date.today() + timedelta(days=days)
     #  Print the future date
     print("Future date: ", future_date.strftime("%Y-%m-%d"))
 
